@@ -38,9 +38,32 @@ class _HomePageState extends State<HomePage> {
                  children: [
                   NameTeam(name: "A",),
                    PointScoreA(),
-                   pointA(pointnumber: 1),
-                   pointA(pointnumber: 2,),
-                   pointA(pointnumber: 3,),
+                   pointA(
+                       pointnumber: 1,
+                       onPressed: (){
+                      scoreA++;
+                      setState(() {
+
+                     });
+                   }),
+                   pointA(pointnumber: 2,
+                     onPressed:
+                     (){
+                       scoreA=scoreA+2;
+                       setState(() {
+
+                       });
+                     }
+
+                   ),
+                   pointA(pointnumber: 3,
+                   onPressed: (){
+                     scoreA+=3;
+                     setState(() {
+
+                     });
+                   },
+                   ),
                  ],
                ),
                SizedBox(
@@ -54,16 +77,39 @@ class _HomePageState extends State<HomePage> {
                    children: [
                      NameTeam(name: "B",),
                      PointScoreB(),
-                     pointB(pointnumber: 1,),
-                     pointB(pointnumber: 2,),
-                     pointB(pointnumber: 3,),
+                     pointB(pointnumber: 1,onPressed: (){
+                         scoreB++ ;
+                             setState(() {
+
+                             });
+                     }) ,
+                     pointB(pointnumber: 2,onPressed: () {
+                       scoreB = scoreB+2 ;
+                       setState(() {
+
+                       });
+                     }),
+                     pointB(pointnumber: 3,onPressed: () {
+                       scoreB = scoreB+3 ;
+                       setState(() {
+
+                       });
+                     }),
                    ],
                  ),
                ),
              ],
            ),
            SizedBox(height: 35,),
-           Reset(),
+           Reset(
+             onPressed: (){
+               scoreA=0;
+               scoreB=0;
+               setState(() {
+
+               });
+             },
+           ),
          ],
        ),
      ),

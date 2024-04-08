@@ -10,7 +10,6 @@ class HomePage extends StatefulWidget{
   @override
   State<HomePage> createState() => _HomePageState();
 }
-
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
@@ -38,26 +37,19 @@ class _HomePageState extends State<HomePage> {
                  children: [
                   NameTeam(name: "A",),
                    PointScoreA(),
-                   pointA(
-                       pointnumber: 1,
-                       onPressed: (){
+                   pointA(pointnumber: 1, onPressed: (){
                       scoreA++;
                       setState(() {
 
                      });
                    }),
-                   pointA(pointnumber: 2,
-                     onPressed:
-                     (){
+                   pointA(pointnumber: 2, onPressed: (){
                        scoreA=scoreA+2;
                        setState(() {
 
                        });
-                     }
-
-                   ),
-                   pointA(pointnumber: 3,
-                   onPressed: (){
+                     }),
+                   pointA(pointnumber: 3, onPressed: (){
                      scoreA+=3;
                      setState(() {
 
@@ -92,7 +84,6 @@ class _HomePageState extends State<HomePage> {
                      pointB(pointnumber: 3,onPressed: () {
                        scoreB = scoreB+3 ;
                        setState(() {
-
                        });
                      }),
                    ],
